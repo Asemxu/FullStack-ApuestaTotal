@@ -1,9 +1,11 @@
 # STACK
-1. Firebase
-    Notificaciones  ->Realtime Database
+1. SocketIO
+    - Notificaciones  -> (FrontEnd y BackeEnd)
 
-2. Front End 
+2. FrontEnd 
     - React
+    - Tailwind CSS
+    - Zustang
 
 3. BackEnd
     - Express
