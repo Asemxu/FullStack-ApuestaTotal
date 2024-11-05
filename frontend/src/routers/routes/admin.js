@@ -1,15 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import Dashboard from './Dashboard';
-// import Users from './Users';
 
 const Admin = () => {
   return (
     <Routes>
-      {/* <Route path="dashboard" element={<Dashboard />} /> */}
-      {/* <Route path="users" element={<Users />} /> */}
+      <Route path="accept" element={<h1>Vista para aceptar</h1>} />
+      <Route path="history-accepts" element={<h1>Vista del historial</h1>} />
     </Routes>
   );
 };
 
-export default Admin;
+export default Admin

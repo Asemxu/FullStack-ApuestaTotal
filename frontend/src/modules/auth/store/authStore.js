@@ -7,11 +7,13 @@ const useAuthStore = create(
     (set) => ({
       user: null,
       accessToken : null,
-      setInfoUser: (token , user) => {
-        set({ accessToken: token , user : user });
+      totalMedals : 0,
+      rol: null,
+      setInfoUser: (token , user , rol) => {
+        set({ accessToken: token , user : user  , rol : rol});
       },
       clearAuth : () => {
-        set({ user : null , accessToken : null })
+        set({ user : null , accessToken : null , totalMedals : 0 , rol : null})
       }
     }),
     

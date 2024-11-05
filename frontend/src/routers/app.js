@@ -4,6 +4,7 @@ import { Login, Register }  from "../modules/auth/views";
 import  App from "../modules/core/layouts/app";
 import PrivateRoutes from "./privateRoutes";
 import User from "./routes/user";
+import Admin from './routes/admin'
 import PublicRoutes from "./publicRoutes";
 import NotFound from "../modules/core/views/notFound/notFound";
 const router = createBrowserRouter([
@@ -39,7 +40,10 @@ const router = createBrowserRouter([
       },
       {
         path: "admin/*",
-        element: <Login />,
+        element: 
+          <PrivateRoutes>
+            <Admin />
+          </PrivateRoutes>
       },
       {
         path: '*',

@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import useAuthStore from '../modules/auth/store/authStore';
 
 const PrivateRoutes = ({ children }) => {
-  const { accessToken } = useAuthStore();
+  const { accessToken   } = useAuthStore();
   return accessToken ? children : <Navigate to="/login" />;
 };
 
