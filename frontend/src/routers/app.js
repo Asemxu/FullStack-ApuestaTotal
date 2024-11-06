@@ -1,52 +1,55 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-import { Login, Register }  from "../modules/auth/views";
-import  App from "../modules/core/layouts/app";
+import { Login, Register } from "../modules/auth/views";
+import App from "../modules/core/layouts/app";
 import PrivateRoutes from "./privateRoutes";
 import User from "./routes/user";
-import Admin from './routes/admin'
+import Admin from "./routes/admin";
 import PublicRoutes from "./publicRoutes";
 import NotFound from "../modules/core/views/notFound/notFound";
 const router = createBrowserRouter([
   {
-    path: '/',
-    element:  <Navigate to="/login" replace />,
+    path: "/",
+    element: <Navigate to="/login" replace />,
   },
   {
     path: "/",
-    element: 
-      <App/>,
+    element: <App />,
     children: [
       {
         path: "login",
-        element:
+        element: (
           <PublicRoutes>
             <Login />,
           </PublicRoutes>
+        ),
       },
       {
         path: "register",
-        element:
+        element: (
           <PublicRoutes>
             <Register />,
           </PublicRoutes>
+        ),
       },
       {
         path: "user/*",
-        element: 
+        element: (
           <PrivateRoutes>
             <User />
           </PrivateRoutes>
+        ),
       },
       {
         path: "admin/*",
-        element: 
+        element: (
           <PrivateRoutes>
             <Admin />
           </PrivateRoutes>
+        ),
       },
       {
-        path: '*',
+        path: "*",
         element: <NotFound />,
       },
     ],

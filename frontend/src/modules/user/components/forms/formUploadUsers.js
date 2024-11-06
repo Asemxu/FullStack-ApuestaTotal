@@ -1,6 +1,8 @@
 import { Fragment } from "react";
-
+import { useUser } from "../../../core/hooks";
+import { GetImageMedal } from "../../utils";
 export const FormUploadUsers = () => {
+  const { totalMedals } = useUser()   
   return (
     <Fragment>
       <h2 className="font-bold">Sube tus usuarios por .csv</h2>
@@ -17,13 +19,10 @@ export const FormUploadUsers = () => {
       <div className="text-center mt-4">
         <p>Posible Medalla</p>
         <p>(por verificar)</p>
-        <img
-          className="m-auto"
-          height={100}
-          width={100}
-          src="/medals/medal.jpg"
-          alt="Posible medalla"
-        />
+        
+        <GetImageMedal  totalMedals={totalMedals}/>
+        
+        <h2>Mi total de clientes registrados es {totalMedals}</h2>
       </div>
     </Fragment>
   );

@@ -1,7 +1,7 @@
 import useAuthStore from "../../auth/store/authStore";
 export  const useUser = () => {
-  const { user } = useAuthStore();
-  return { user };
+  const { user , rol , totalMedals } = useAuthStore();
+  return { user , rol , totalMedals };
 };
 
 

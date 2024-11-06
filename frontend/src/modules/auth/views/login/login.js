@@ -18,7 +18,7 @@ export const Login = () => {
     const formData = new FormData();
     formData.append("id", idUser);
     formData.append("password", password);
-    setInfoUser(idUser, password, isChecked ? ROLES.ADMIN.value : ROLES.USER.value );
+    setInfoUser("abctoken", idUser, isChecked ? ROLES.ADMIN.value : ROLES.USER.value );
     if(isChecked)
       navigate("/admin/accept");
     else
