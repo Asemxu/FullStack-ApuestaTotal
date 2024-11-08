@@ -9,6 +9,8 @@
 
 3. BackEnd
     - Express
+    - Sequelize
+    - JWT
 
 4. Base de datos 
     - Mysql
