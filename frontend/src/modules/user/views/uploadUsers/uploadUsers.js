@@ -1,8 +1,8 @@
-import useAuthStore from "../../../auth/store/authStore";
 import { Link } from "react-router-dom";
 import { FormUploadUsers } from "../../components";
+import { useUser } from "../../../core/hooks";
 export const UploadUsers = () => {
-  const { user } = useAuthStore();
+  const { user } = useUser();
 
   return (
     <div className="mt-4">

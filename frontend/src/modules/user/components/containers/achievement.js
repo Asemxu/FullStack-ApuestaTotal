@@ -1,11 +1,11 @@
 import { haveAchivement } from "../../utils"
-import useAuthStore from "../../../auth/store/authStore"
+import { useUser } from "../../../core/hooks"
 
 export const Achievement = ({
     key,
     medal
 }) => {
-    const { totalMedals } = useAuthStore()
+    const { totalMedals } = useUser()
     return (
         <img
             key={key}

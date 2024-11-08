@@ -1,11 +1,12 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Accept , History } from '../../modules/admin/views';
 
 const Admin = () => {
   return (
     <Routes>
-      <Route path="accept" element={<h1>Vista para aceptar</h1>} />
-      <Route path="history-accepts" element={<h1>Vista del historial</h1>} />
+      <Route path="accept" element={<Accept />} />
+      <Route path="history-accepts" element={<History />} />
     </Routes>
   );
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import useAuthStore from '../modules/auth/store/authStore';
+import { useUser } from '../modules/core/hooks';
 
 const PrivateRoutes = ({ children }) => {
-  const { accessToken   } = useAuthStore();
+  const { accessToken   } = useUser();
   return accessToken ? children : <Navigate to="/login" />;
 };
 

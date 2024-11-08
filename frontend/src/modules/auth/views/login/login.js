@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { LoginIcon } from "../../../core/components/icons";
 import { LoginForm } from "../../components/forms/loginForm";
-import useAuthStore from "../../store/authStore";
+import { useUser } from "../../../core/hooks";
 import { useNavigate } from "react-router-dom";
 import { ROLES } from "../../constants/roles";
 
@@ -10,7 +10,7 @@ export const Login = () => {
   const [password, setPassword] = useState("");
   const [isChecked, setIsChecked] = useState(false);
 
-  const { setInfoUser } = useAuthStore();
+  const { setInfoUser } = useUser();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {

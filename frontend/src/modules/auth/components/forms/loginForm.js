@@ -1,6 +1,6 @@
 import React from 'react';
 import { MailIcon, LockIcon } from '../../../core/components/icons';
-import useAuthStore from '../../store/authStore';
+import { useUser } from '../../../core/hooks';
 export const LoginForm= ({
   idUser,
   password,
@@ -8,7 +8,7 @@ export const LoginForm= ({
   onPasswordChange,
   onSubmit,
 }) => {
-  const  { accessToken , user } = useAuthStore()
+  const  { accessToken , user } = useUser()
   return (
    
     <form onSubmit={onSubmit} className="space-y-6">

@@ -1,8 +1,8 @@
 import { MEDALS , NOTMEDALS } from "../../constants";
-import useAuthStore from "../../../auth/store/authStore";
 import { Achievement } from "./achievement";
+import { useUser } from "../../../core/hooks";
 export const ListAchievement = () => {
-  const { totalMedals } = useAuthStore();
+  const { totalMedals } = useUser();
   return (
     <div
       className={`flex flex-wrap justify-between gap-2 ${
